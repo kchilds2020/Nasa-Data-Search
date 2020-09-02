@@ -73,7 +73,7 @@ function Feed(props){
         return (
             <div>
                 {state.posts.length <= 0 ? <Intro /> : <></>}
-                 {state.posts.length > 0 ? <>{state.posts}</> : <div style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px'}}><input placeholder='Example: Mars' onChange={e => setSearch(e.target.value)} style={{height: '40px', width: '70%', maxWidth: '900px', paddingLeft: '15px',border: 'none', borderRadius: '20px 0px 0px 20px', fontSize: '18px'}}/><button onClick = {firstSearch} style ={{height: '42px', padding: '10px', border: 'none', borderRadius:'0px 20px 20px 0px', fontSize: '18px', cursor: 'pointer'}}>Search</button></div>}
+                 {state.posts.length > 0 ? <>{state.posts}</> : <form onSubmit={firstSearch}><div style={{width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '50px'}}><input placeholder='Example: Mars' onChange={e => setSearch(e.target.value)} style={{height: '40px', width: '70%', maxWidth: '900px', paddingLeft: '15px',border: 'none', borderRadius: '20px 0px 0px 20px', fontSize: '18px'}}/><button style ={{height: '42px', padding: '10px', border: 'none', borderRadius:'0px 20px 20px 0px', fontSize: '18px', cursor: 'pointer'}}>Search</button></div></form>}
              </div>
          );
  }
